@@ -10,26 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_12_225522) do
+ActiveRecord::Schema.define(version: 2019_01_12_234212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "boxes", force: :cascade do |t|
-    t.float "price"
-    t.float "previous_price"
-    t.integer "availability"
-    t.datetime "pick_up_date_start"
-    t.datetime "pick_up_date_end"
-    t.bigint "shop_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["shop_id"], name: "index_boxes_on_shop_id"
-  end
-
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "shop_id"
+    t.bigint "user_id"
+    t.index ["shop_id"], name: "index_carts_on_shop_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -44,11 +36,9 @@ ActiveRecord::Schema.define(version: 2019_01_12_225522) do
     t.datetime "code_validated_time"
     t.string "payment_mode"
     t.bigint "cart_id"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_orders_on_cart_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "past_orders", force: :cascade do |t|
@@ -82,9 +72,9 @@ ActiveRecord::Schema.define(version: 2019_01_12_225522) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "boxes", "shops"
+  add_foreign_key "carts", "shops"
+  add_foreign_key "carts", "users"
   add_foreign_key "orders", "carts"
-  add_foreign_key "orders", "users"
   add_foreign_key "past_orders", "orders"
   add_foreign_key "shops", "categories"
 end
