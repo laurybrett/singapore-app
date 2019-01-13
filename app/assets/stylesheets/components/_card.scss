@@ -1,0 +1,61 @@
+.shop-card {
+  position: relative;
+  width: 344px;
+  height: 206px;
+  left: 15px;
+  top: 105px;
+  background: #FEFEFE;
+  border-radius: 10px;
+}
+
+.shop-card-header {
+  height: 148px;
+  background: url(image-back.jpg), #C4C4C4;
+  opacity: 0.5;
+  position:absolute;
+  width: 344px;
+}
+
+.shop-card-footer {
+  display : flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0px;
+  height: 58px;
+  position:absolute;
+  background: white;
+  border-radius: 10px;
+  width: 344px;
+  p {
+    font-size: 14px;
+    }
+  }
+
+.shop-card-title {
+  background: #E5E5E5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  position:absolute;
+  top: 50%;
+  width: 344px;
+  text-align: center;
+}
+
+.shop-card-logo-avatar {
+  position:absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  left: 147px;
+  top: 0px;
+  background: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.shop-card-price {
+  background: #E5E5E5;
+  border-radius: 12px;
+  position:absolute;
+  right: 14px;
+  top: 20px;
+}
