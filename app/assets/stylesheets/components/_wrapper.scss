@@ -1,0 +1,18 @@
+.connection-wrapper {
+  background-image: asset-url('placeholder_back.jpg');
+  background-size: 370px 517px;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  margin: 40px;
+}
+
+.signup-wrapper {
+  width : 34vh;
+  height: 200px;
+}
+
+.wrapper-and-form {
+  display: flex;
+  justify-content: center;
+}
