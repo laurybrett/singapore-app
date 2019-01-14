@@ -1,32 +1,43 @@
+<div class="container complete-form">
 
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-  <%= f.input :fullname,
-                placeholder: 'Full name',
-                label: false,
-                input_html: { autocomplete: "fullname" }%>
-    <%= f.input :email,
-                placeholder: 'Email',
-                label: false,
-                required: true,
-                autofocus: true ,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+  <div class="connection-wrapper">
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "SIGN UP", class: "btn btn-action btn-duck-blue"%>
-  </div>
-<% end %>
+    <div class="signup-wrapper wrapper-and-form">
+        <div class="container form-inputs ">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
 
-<%= render "devise/shared/links" %>
+          <%= f.input :fullname,
+                        placeholder: 'Full name',
+                        label: false,
+                        input_html: { autocomplete: "fullname", class: "border-rad" }%>
+            <%= f.input :email,
+                        placeholder: 'Email',
+                        label: false,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email", class: "border-rad" }%>
+            <%= f.input :password,
+                        required: true,
+                        placeholder: 'Password',
+                        label: false,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" , class: "border-rad"} %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        placeholder: 'Password confirmation',
+                        label: false,
+                        input_html: { autocomplete: "new-password", class: "border-rad" } %>
+          <div class="align-btn">
+          <%= f.button :submit, "CONFIRM", class: "btn btn-medium btn-action btn-duck-blue border-rad"%>
+          <% end %>
+          </div>
+        <div class="form-links complete-form">
+        <%= render "devise/shared/links" %>
+        </div>
+
+      </div>
+    </div>
+
+</div>
