@@ -29,13 +29,15 @@
                         placeholder: 'Password confirmation',
                         label: false,
                         input_html: { autocomplete: "new-password", class: "border-rad" } %>
-          <div class="align-btn">
-          <%= f.button :submit, "CONFIRM", class: "btn btn-medium btn-action btn-duck-blue border-rad"%>
-          <% end %>
-          </div>
-        <div class="form-links complete-form">
-        <%= render "devise/shared/links" %>
-        </div>
+
+            <div class="form-links complete-form">
+              <%= f.button :submit, "CONFIRM", class: "btn btn-medium btn-action btn-duck-blue border-rad"%>
+              <% end %>
+            </div>
+
+            <div class="form-links complete-form">
+             <%= render "devise/shared/links" %>
+            </div>
 
       </div>
     </div>
