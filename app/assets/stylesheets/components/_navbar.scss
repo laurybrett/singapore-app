@@ -1,57 +1,57 @@
-/* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+/* TOP navbar */
+.navbar-top {
+  background: $orange;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  margin-left: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.navbar-top-brand img {
   height: 50px;
 }
 
 /* User Avatar */
-.navbar-wagon .avatar {
+.navbar-top .avatar {
   height: 35px;
   width: 35px;
   border-radius: 50%;
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-top-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Basic navbar item */
-.navbar-wagon-item {
+.navbar-top-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 17px 0 4px;
+  font-size: 20px;
 }
 
 /* Navbar link */
-.navbar-wagon-link {
+.navbar-top-link {
   color: #616668;
   font-size: 14px;
 }
-.navbar-wagon-link:hover {
+.navbar-top-link:hover {
   color: #da552f;
   text-decoration: none;
 }
 
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.navbar-top-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+.navbar-top-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
@@ -59,11 +59,11 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.navbar-top-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.navbar-top-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;
@@ -74,4 +74,46 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+/* Search bar */
+.fa-bars {
+  color: #545252;
+  font-size: 20px;
+}
+
+.navbar-search-bar {
+  border-radius: 13px;
+  color: $grey;
+  font-size: 17px;
+  width: 97%;
+  height: 40px;
+  top: 6px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0.1em;
+}
+
+#search-shop {
+  width: 100%;
+}
+
+/* BOTTOM NAVBAR */
+
+.navbar-bottom {
+  background: $blue;
+  transition: all 0.3s ease;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#bottom-navbar  a{
+color: $grey;
+}
+
+#bottom-navbar {
+
 }
