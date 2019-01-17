@@ -25,7 +25,7 @@
 .navbar-top-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* Basic navbar item */
@@ -106,14 +106,10 @@
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-
-#bottom-navbar  a{
+.bottom-navbar  a{
 color: $grey;
-}
-
-#bottom-navbar {
-
+margin: 0.5em;
 }
