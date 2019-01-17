@@ -2,15 +2,17 @@
   <!-- Search bar -->
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-top-right" id="bottom-navbar">
-          <%= link_to "#" do %>
-            <i class="fa fa-cookie-bite"></i> <%= t(".profile", default: "Find food") %>
-          <% end %>
-           <%= link_to "#" do %>
-           <i class="fa fa-map-marked"></i>  <%= t(".settings", default: "Map") %>
-           <% end %>
-          <%= link_to destroy_user_session_path, method: :delete do %>
-            <i class="fa fa-shopping-cart"></i>  <%= t(".sign_out", default: "My orders") %>
-          <% end %>
+  <div class="navbar-top-right">
+    <div class="bottom-navbar">
+        <%= link_to shops_path do %>
+          <i class="fa fa-cookie-bite"></i> <%= t(".food", default: "Find food") %>
+        <% end %>
+         <%= link_to "#" do %>
+         <i class="fa fa-map-marked"></i>  <%= t(".map", default: "Map") %>
+         <% end %>
+        <%= link_to "#" do %>
+          <i class="fa fa-shopping-cart"></i>  <%= t(".orders", default: "My orders") %>
+        <% end %>
     </div>
+  </div>
 </div>

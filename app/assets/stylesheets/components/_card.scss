@@ -1,11 +1,14 @@
+/* SHOP#INDEX CARDS */
+
 .shop-card {
   position: relative;
   width: 344px;
   height: 206px;
-  left: 15px;
-  top: 105px;
+  top: 3%;
+  right: 2%;
   background: #FEFEFE;
   border-radius: 10px;
+  color: black;
 }
 
 .shop-card-header {
@@ -14,6 +17,7 @@
   opacity: 0.5;
   position:absolute;
   width: 344px;
+  border-radius: 10px;
 }
 
 .shop-card-footer {
@@ -58,4 +62,55 @@
   position:absolute;
   right: 14px;
   top: 20px;
+}
+
+/* FOR THE SHOP#SHOW */
+
+.big-shop-card {
+  position: relative;
+  width: 100%;
+  height: 245px;
+  top: 20%;
+  background-image: asset-url('placeholder_back.jpg');
+  background-size: 370px 517px;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.big-shop-card-header {
+  height: 60px;
+  background: white;
+  position:absolute;
+  width: 100%;
+}
+
+.big-shop-card-footer {
+  height: 60px;
+  position:absolute;
+  width: 100%;
+}
+
+.big-shop-card-price {
+  height: 100%;
+  width: 20%;
+  background: $light-grey;
+  font-size: 15px;
+  padding-left: 1%;
+}
+
+.shop-title {
+  text-align: center;
+}
+
+.add-cart {
+  display:flex;
+  justify-content:center;
+  .a {
+    color:black;
+  }
+}
+
+.description-container {
+  font-size:10px;
+  margin: 4px 4px 0 6px ;
 }
