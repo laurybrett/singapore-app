@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Shop.destroy_all
+puts "Deleted shops"
+
 User.destroy_all
 puts "Deleted Users"
 
@@ -13,8 +16,11 @@ Category.destroy_all
 puts "Deleted categories"
 
 Category.create(name: "Bakery")
+puts Category.first.id
 Category.create(name: "Restaurant")
 Category.create(name: "Supermarket")
 Category.create(name: "Coffee shop")
-puts "Created categories"
-puts "category: #{Category.count}"
+puts "#{Category.count} categories created"
+
+Shop.create(name:"Maison Kayser",description: "French bakery in Singapore", code: 1234, location: "3 Arab Street, 12322 Singapore", category: Category.where(name: "Bakery").first, price: 4.99, ex_price: 12.00, nb_box: 4)
+puts "#{Shop.count} shops created"

@@ -2,22 +2,24 @@
   <div class="row">
     <div class="col-sm-12">
 
-      <%= link_to "#" do %>
-        <div class="shop-card">
-          <div class="shop-card-header" style="background-image: rl('https://kitt.lewagon.com/placeholder/cities/shanghai')">
-            <div class="shop-card-logo-avatar">
+      <%@shops.each do |shop| %>
+        <%= link_to shop_path(shop) do %>
+          <div class="shop-card">
+            <div class="shop-card-header" style="background-image: rl('https://kitt.lewagon.com/placeholder/cities/shanghai')">
+              <div class="shop-card-logo-avatar">
+              </div>
+              <div class="shop-card-price">
+                <p>$<%= shop.price%></p>
+              </div>
+              <div class="shop-card-title">
+                <h4><%= shop.name%></h4>
+              </div>
             </div>
-            <div class="shop-card-price">
-              <p>$4.50</p>
-            </div>
-            <div class="shop-card-title">
-              <h4>Eric Kayser</h4>
+            <div class="shop-card-footer">
+              <p><%=shop.nb_box%> left</p><p><%= shop.location %></p><p>7.30pm - 8.30pm</p>
             </div>
           </div>
-          <div class="shop-card-footer">
-            <p>3 left</p><p>Marina Bay Sand</p><p>7.30pm - 8.30pm</p>
-          </div>
-        </div>
+        <% end %>
       <% end %>
 
     </div>
