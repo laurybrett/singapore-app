@@ -1,5 +1,5 @@
 <div class="shop-title">
-  <h4>Eric Kayser</h4>
+  <h4><%=@shop.name%></h4>
 </div>
 
 <div class=container>
@@ -9,7 +9,7 @@
         <div class="big-shop-card">
 
           <div class="big-shop-card-header">
-            <p>3 left</p>
+            <p><%=@shop.nb_box%> left</p>
             <p>7.30pm - 8.30pm</p>
             <div class="shop-card-logo-avatar">
             </div>
@@ -19,11 +19,10 @@
 
           <div class="big-shop-card-footer navbar-fixed-bottom">
             <div class="big-shop-card-price">
-              <p>$4.50</p>
-              <p>$12.00</p>
+              <p>$<%= @shop.price%></p>
+              <p>$<%= @shop.ex_price%></p>
             </div>
           </div>
-
         </div>
     </div>
 
@@ -36,11 +35,11 @@
     </div>
 
     <div class="description-container">
-      <p>Eric Kayser is a french bakery based in Singapore since 2000.If you decide to save one delicious portion, you can expect to take away sandwiches, french croissant, breads and pastry.Our partner cannot predict what will be left at the end of the day. Surprise! Don’t forget to bring your own bag to avoid the use of plastic bags.</p>
+      <p><%= @shop.description%></p>
     </div>
 
     <div class="direction-container">
-
+    <p><%= @shop.location %></p>
     </div>
 
   </div>
