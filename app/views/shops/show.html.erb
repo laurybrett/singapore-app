@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-sm-12">
 
-        <div class="big-shop-card">
+        <div class="big-shop-card pos-rel">
 
           <div class="big-shop-card-header">
             <p><%=@shop.nb_box%> left</p>
@@ -28,9 +28,11 @@
 
     <div class="col-sm-12">
         <div class="add-cart">
+          <%= link_to new_shop_cart_path(@shop.id) do %>
             <div class="btn btn-action btn-add-cart">
              +
             </div>
+          <% end %>
         </div>
     </div>
 
