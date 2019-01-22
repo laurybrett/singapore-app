@@ -1,16 +1,35 @@
 .complete-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  padding: 40px;
 }
 
 .form-links {
-  margin: 10px;
+  margin: 0 0 15px;
 }
 
-.margin-password-forgot {
-  margin-top: 50%;
+.forgot-password-holder {
+  text-align: center;
+}
+
+.forgot-password {
+  color: white;
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+  }
+}
+
+.remember-me-holder {
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 1px;
+    float: left;
+  }
+
+  label {
+    overflow: hidden;
+  }
 }
 
 /* add up to the input of the form in new_session_html.erb */
@@ -22,7 +41,54 @@
 
 .tiny-text {
   font-size: 12px;
-  color: white;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+.form-group {
+  & small {
+    font-size: 12px;
+  }
+}
+
+.form-control {
+  background: white;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow: none;
+  height: 40px;
+  -webkit-transition: box-shadow 150ms linear;
+  -ms-transition: box-shadow 150ms linear;
+  transition: box-shadow 150ms linear;
+
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    color: black;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    -webkit-transition: opacity 150ms linear;
+    -ms-transition: opacity 150ms linear;
+    transition: opacity 150ms linear;
+  }
+
+  &:active,
+  &:focus {
+    border-color: white;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    background: white;
+    color: black;
+
+    &::placeholder,
+    &::-webkit-input-placeholder {
+      opacity: 0.2;
+    }
+  }
+}
+
+.invalid-feedback {
+  color: red;
 }
