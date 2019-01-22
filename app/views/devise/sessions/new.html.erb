@@ -1,39 +1,39 @@
-<div class="container complete-form">
+<div id="wrapper" class="top-padded-screen">
+    <div class="connection-wrapper"></div>
+    <div class="complete-form">
+        <div class="signup-wrapper wrapper-and-form">
+            <div class="form-inputs">
+                <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <div class="connection-wrapper">
-    </div>
+                <div class="form-inputs">
+                    <div class="form-group">
+                        <%= f.button :submit, "Connect with facebook", class: "btn btn-social btn-action border-rad"%>
+                    </div>
+                    <%= f.input :email,
+                          required: false,
+                          autofocus: true,
+                          label: false,
+                          placeholder: 'Email',
+                          input_html: { autocomplete: "email", class: "border-rad" } %>
+                    <%= f.input :password,
+                          required: false,
+                          label: false,
+                          placeholder: 'Password',
+                          input_html: { autocomplete: "current-password", class: "border-rad " } %>
+                    <div class="remember-me-holder form-group tiny-text">
+                        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                    </div>
+                </div>
 
-    <div class="signup-wrapper wrapper-and-form">
-      <div class="container form-inputs ">
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :email,
-                      required: false,
-                      autofocus: true,
-                      label: false,
-                      placeholder: 'Email',
-                      input_html: { autocomplete: "email", class: "border-rad" } %>
-          <%= f.input :password,
-                      required: false,
-                      label: false,
-                      placeholder: 'Password',
-                      input_html: { autocomplete: "current-password", class: "border-rad " } %>
+                <div class="form-links">
+                    <%= f.button :submit, "LOG IN", class: "btn btn-normal btn-action dark-blue border-rad"%>
+                    <% end %>
+                </div>
 
-            <div class="tiny-text">
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                <div class="form-links">
+                    <%= render "devise/shared/links" %>
+                </div>
             </div>
         </div>
-
-        <div class="form-links complete-form">
-          <%= f.button :submit, "LOG IN", class: "btn btn-action btn-duck-blue border-rad"%>
-          <% end %>
-        </div>
-
-        <div class="form-links complete-form">
-          <%= render "devise/shared/links" %>
-        </div>
-
-      </div>
     </div>
-
 </div>

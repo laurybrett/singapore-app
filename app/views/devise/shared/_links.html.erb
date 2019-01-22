@@ -1,13 +1,15 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "LOG IN", new_session_path(resource_name),{class: 'btn btn-action btn-medium border-rad btn-light-grey'} %><br />
+  <%= link_to "LOG IN", new_session_path(resource_name),{class: 'btn btn-normal btn-action border-rad light-grey'} %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "SIGN UP", new_registration_path(resource_name), {class: 'btn btn-action border-rad btn-medium btn-light-grey'} %><br />
+  <%= link_to "SIGN UP", new_registration_path(resource_name), {class: 'btn btn-normal btn-action border-rad light-grey'} %><br />
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name), {class: 'tiny-text margin-password-forgot'} %><br />
+  <div class="forgot-password-holder">
+  	<%= link_to "Forgot your password?", new_password_path(resource_name), {class: 'tiny-text forgot-password'} %><br />
+  </div>
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

@@ -3,13 +3,32 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
-  text-align: center;
-  color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+  	margin: 0;
+  	padding: 20px;
+  	text-align: left;
+  	color: white;
+
+  	& .close {
+  		position: static;
+  		top: auto;
+  		right: auto;
+  		margin-left: 20px;
+  		width: 33px;
+  		height: 33px;
+  	}
+}
+.alert-message-holder {
+	overflow: hidden;
+	padding: 4px 0;
 }
 .alert-info {
-  background: $green;
+  	background: $green;
 }
+.alert-danger,
 .alert-warning {
-  background: $red;
+  	background: $red;
 }
