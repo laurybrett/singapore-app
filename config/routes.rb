@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'shops#index'
 
   resources :shops do
-    resources :carts, only: [:show, :new, :create, :destroy] do
+    resources :carts, only: [:index, :show, :new, :create, :destroy] do
       resources :orders, only: [:show, :new, :create, :destroy] do
         resources :past_orders, only: [:index, :new, :create]
       end

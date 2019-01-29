@@ -17,9 +17,21 @@ body {
 }
 
 .signup-wrapper {
-
 }
 
 .wrapper-and-form {
+}
 
+/* FOR CART#SHOW */
+
+.wrapper-grey {
+  height: 30px;
+  width: 100%;
+  background-color: $grey;
+  margin-bottom: 19px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
 }

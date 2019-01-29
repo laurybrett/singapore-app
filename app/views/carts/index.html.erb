@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+        <div class="cart-container">
+            <div class="big-shop-card-header">
+                <div class="shop-card-logo-avatar" id="cart-avatar">
+                </div>
+                <div class="cart-shop-title">
+                  <h4><%= @shop.name%></h4>
+                </div>
+            </div>
+
+            <div class="big-shop-card" id="big-shop-cart">
+            </div>
+
+            <div class="order-title">
+              <h3>ORDER</h3>
+            </div>
+
+            <div class="cart-info-container">
+              <div class="cart-info">
+                <p>Pick-up time</p>
+              </div>
+              <div class="cart-info">
+                <p>Availabilities</p>
+                <%= @shop.nb_box %></div>
+              <div class="cart-info">
+                <p>Directions</p>
+                <%=  @shop.location%></div>
+            </div>
+
+            <div class="cart-line"></div>
+
+            <div class="cart-total">
+            </div>
+
+            <div class="col-sm-12">
+                <div class="add-cart">
+                  <%= simple_form_for [@shop] do |f|%>
+                    <%= f.submit "CONFIRM CODE", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
+                  <% end %>
+                </div>
+            </div>
+
+    </div>
+  </div>
+</div>
