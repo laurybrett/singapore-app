@@ -1,4 +1,11 @@
 class CartsController < ApplicationController
+
+  def index
+    @shop = Shop.find(params[:shop_id])
+    @user = User.find(current_user.id)
+    @carts = Cart.all
+  end
+
   def new
     @shop = Shop.find(params[:shop_id])
     @user = User.find(current_user.id)
@@ -11,6 +18,12 @@ class CartsController < ApplicationController
     @cart.shop = @shop
     @cart.user = current_user
     @cart.save
+
+    if @cart.save
+      redirect_to shop_carts_path(@shop, @cart)
+    else
+      render :new
+    end
   end
 
   def show
@@ -21,5 +34,4 @@ class CartsController < ApplicationController
     @cart = Cart.find(params[:id])
     @cart.destroy
   end
-
 end
