@@ -20,7 +20,8 @@ class CartsController < ApplicationController
     @cart.save
 
     if @cart.save
-      redirect_to shop_carts_path(@shop, @cart)
+      @order = @cart.order
+      redirect_to shop_cart_order_path(@shop, @cart, @order)
     else
       render :new
     end
