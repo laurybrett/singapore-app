@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :shops do
     resources :carts, only: [:index, :show, :new, :create, :destroy] do
-      resources :orders, only: [:show, :new, :create, :destroy] do
+      resources :orders do
         resources :past_orders, only: [:index, :new, :create]
       end
     end
