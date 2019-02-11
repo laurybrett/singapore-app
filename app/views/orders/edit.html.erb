@@ -38,8 +38,8 @@
             <div class="col-sm-12">
                 <div class="add-cart"
 
-                  <%= form_for (@order) do |f| %>
-                  <%= f.check_box :code_validated %>
+                  <%= simple_form_for [@shop, @cart, @order] do |f| %>
+                  <%= f.input :code_validated?, :input_html => { :checked => true } %>
                     <%= f.submit "CONFIRM VALIDATION", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
                   <% end %>
                 </div>

@@ -13,7 +13,9 @@ class OrdersController < ApplicationController
     @user = User.find(current_user.id)
     @order = Order.new
     @order.cart = @cart
+    @order.code_validated == false
     @order.save
+
 
     if @cart.save
       redirect_to edit_shop_cart_order_path(@shop, @cart)
@@ -23,6 +25,8 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    @shop = Shop.find(params[:shop_id])
+    @cart = Cart.find(params[:cart_id])
     @order = Order.find(params[:id])
   end
 
