@@ -39,8 +39,8 @@
                 <div class="add-cart"
 
                   <%= simple_form_for [@shop, @cart, @order] do |f| %>
-                  <%= f.input :code_validated?, :input_html => { :checked => true } %>
-                    <%= f.submit "CONFIRM VALIDATION", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
+                  <%= f.input :code_validated, as: :boolean, checked_value: true, unchecked_value: false %>
+                    <%= f.submit "CONFIRM", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
                   <% end %>
                 </div>
             </div>

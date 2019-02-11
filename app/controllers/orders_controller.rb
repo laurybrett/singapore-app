@@ -34,6 +34,12 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order.update(order_params)
     redirect_to shops_path
+
+    if @order.update(order_params)
+      redirect_to shop_path(@shop)
+    else
+      render :edit
+    end
   end
 
   def show
