@@ -36,10 +36,9 @@
             </div>
 
             <div class="col-sm-12">
-                <div class="add-cart"
-
-                  <%= simple_form_for [@shop, @cart, @order] do |f| %>
-                  <%= f.input :code_validated, as: :boolean, checked_value: true, unchecked_value: false %>
+                <div class="add-cart">
+                  <%= simple_form_for([@shop, @cart, @order]) do |f|%>
+                    <%= f.input :code_validated, as: :boolean, checked_value: true, unchecked_value: false %>
                     <%= f.submit "CONFIRM", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
                   <% end %>
                 </div>
