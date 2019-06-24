@@ -1,6 +1,6 @@
 <div class=container>
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12" id=margin-bottom-row-class>
 
       <%@shops.each do |shop| %>
         <%= link_to shop_path(shop) do %>
@@ -16,7 +16,9 @@
               </div>
             </div>
             <div class="shop-card-footer">
-              <p><%=shop.nb_box%> left</p><p><%= shop.location %></p><p>7.30pm - 8.30pm</p>
+              <p><%=shop.nb_box%> left</p>
+              <p><%= shop.location %></p>
+              <p>7.30pm - 8.30pm</p>
             </div>
           </div>
         <% end %>
