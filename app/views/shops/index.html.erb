@@ -5,7 +5,7 @@
       <%@shops.each do |shop| %>
         <%= link_to shop_path(shop) do %>
           <div class="shop-card">
-            <div class="shop-card-header" style="background-image: rl('https://kitt.lewagon.com/placeholder/cities/shanghai')">
+            <div class="shop-card-header">
               <div class="shop-card-logo-avatar">
               </div>
               <div class="shop-card-price">
@@ -16,9 +16,13 @@
               </div>
             </div>
             <div class="shop-card-footer">
-              <p><%=shop.nb_box%> left</p>
-              <p><%= shop.location %></p>
-              <p>7.30pm - 8.30pm</p>
+              <div>
+                <p id="nb-left"><%=shop.nb_box%> left</p>
+                <p id="shop-addresss"><%= shop.location %></p>
+              </div>
+              <div>
+                <p id="collection-time">7.30pm - 8.30pm</p>
+              </div>
             </div>
           </div>
         <% end %>

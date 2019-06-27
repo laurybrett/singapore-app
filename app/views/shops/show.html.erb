@@ -19,11 +19,22 @@
 
           <div class="big-shop-card-footer navbar-fixed-bottom">
             <div class="big-shop-card-price">
+              <div class="ex-price-card">
+                <p>$<%= @shop.ex_price%></p>
+              </div>
               <p>$<%= @shop.price%></p>
-              <p>$<%= @shop.ex_price%></p>
             </div>
           </div>
         </div>
+    </div>
+
+
+    <div class="description-container">
+      <p><%= @shop.description%></p>
+    </div>
+
+    <div class="direction-container">
+      <p><%= @shop.location %></p>
     </div>
 
     <div class="col-sm-12">
@@ -35,14 +46,5 @@
           <% end %>
         </div>
     </div>
-
-    <div class="description-container">
-      <p><%= @shop.description%></p>
-    </div>
-
-    <div class="direction-container">
-    <p><%= @shop.location %></p>
-    </div>
-
   </div>
 </div>

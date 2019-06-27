@@ -15,33 +15,30 @@
             </div>
 
             <div class="order-title">
-              <h3>I HAVE PICKED UP THE ORDER</h3>
+              <h3 style="margin-top: 10px;"> ORDER PICKING-UP</h3>
             </div>
 
             <div class="cart-info-container">
               <div class="cart-info">
                 <p>Pick-up time</p>
+                <p>Today : 7.30Pm - 8.30pm</p>
               </div>
-              <div class="cart-info">
-                <p>Availabilities</p>
-                <%= @order.cart.shop.nb_box %></div>
               <div class="cart-info">
                 <p>Directions</p>
                 <%= @order.cart.shop.location%></div>
+              <div class="cart-info" id="total-order">
+                <p></p>Total</p>
+                <p style="margin-right: 50px;"><%= @order.cart.shop.price%> SGD</p>
+              </div>
+              <p style="font-size: 14px; margin-left: 10px;">I confirm I let the food merchant validate my order at the <%= @order.cart.shop.name%>'s cachier and I have been given the order.</p>
             </div>
 
-            <div class="cart-line"></div>
-
-            <div class="cart-total">
-            </div>
 
             <div class="col-sm-12">
-                <div class="add-cart">
                   <%= simple_form_for([@shop, @cart, @order]) do |f|%>
                     <%= f.input :code_validated, as: :boolean, checked_value: true, unchecked_value: false %>
                     <%= f.submit "CONFIRM", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
                   <% end %>
-                </div>
             </div>
 
     </div>
