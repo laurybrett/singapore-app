@@ -1,1 +1,24 @@
-CARTS#INDEX
+<div class=container>
+  <div class="row">
+      <div class="col-sm-12">
+
+      <% @carts.reverse.each do |cart| %>
+        <%= link_to shop_carts_path(@carts) do %>
+          <div class="myorder-cart", style="padding: 10px 0 0 20px;">
+            <div class=cart-info>
+              <p style="font-size: 14px; color:black; font-weight: 500;"><%= cart.shop.name%></p>
+            </div>
+            <div class=cart-info style="color: #625F5F;">
+              <p><%= cart.created_at%></p>
+              <p style="font-weight: 300; font-size:13px;"><%= cart.shop.price%> SGD</p>
+
+                <%= link_to root_path(cart), class: "btn btn-action", :method => :delete do %> X
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
