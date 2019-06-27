@@ -33,6 +33,8 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     @order.update(order_params)
+    @order.date_order = DateTime.now
+    @order.code_validated_time = DateTime.now
 
     if @order.update(order_params)
       redirect_to shops_path

@@ -15,22 +15,24 @@
             </div>
 
             <div class="order-title">
-              <h3>ORDER</h3>
+              <h3 style="margin-top:10px;">ORDER</h3>
             </div>
 
             <div class="cart-info-container">
               <div class="cart-info">
-                <p>Pick-up time</p>
+                <p id=titles-info>Pick-up time</p>
+                <p>Today 7:30pm - 8:30pm</p>
               </div>
               <div class="cart-info">
-                <p>Availabilities</p>
+                <p id=titles-info>Availabilities</p>
                 <%= @shop.nb_box %></div>
               <div class="cart-info">
-                <p>Directions</p>
+                <p id=titles-info>Directions</p>
                 <%=  @shop.location%></div>
+                <div class="cart-info">
+                  <p> To save your deal, pre-order it by clicking on "Save order" and go to <%= @shop.name %> at the specified time.</p>
+                </div>
             </div>
-
-            <div class="cart-line"></div>
 
             <div class="cart-total">
             </div>
@@ -38,7 +40,7 @@
             <div class="col-sm-12">
                 <div class="add-cart">
                   <%= simple_form_for [@shop, @cart] do |f|%>
-                    <%= f.submit "PAY TO THE SHOP", class:"btn btn-action btn-duck-blue btn-medium border-rad" %>
+                    <%= f.submit "SAVE ORDER", class:"btn btn-action btn-duck-blue btn-medium border-rad", id:"btn-save-order" %>
                   <% end %>
                 </div>
             </div>
