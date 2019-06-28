@@ -25,26 +25,26 @@
               <p>$<%= @shop.price%></p>
             </div>
           </div>
+        <div>
+          <%= link_to new_shop_cart_path(@shop.id) do %>
+            <div class="btn btn-action btn-add-cart" style="margin-top:60%; margin-right:0px; margin-left:40%;">
+                 +
+            </div>
+          <% end %>
+        </div>
         </div>
     </div>
 
-
     <div class="description-container">
-      <p><%= @shop.description%></p>
+      <p>Come and get your deal among a selection from this <%= @shop.description %>: pastries, smoothies, sandwiches... depending on what was left at the end of the day.</p>
+      <p>Don't forget to bring your bag to reduce the use of disposable plastics.</p>
+      <p>Thank you for your contribution to the fight against food waste !</p>
+      <p style="height: 30px"></p>
     </div>
 
     <div class="direction-container">
       <p><%= @shop.location %></p>
     </div>
 
-    <div class="col-sm-12">
-        <div class="add-cart">
-          <%= link_to new_shop_cart_path(@shop.id) do %>
-            <div class="btn btn-action btn-add-cart">
-             +
-            </div>
-          <% end %>
-        </div>
-    </div>
   </div>
 </div>
