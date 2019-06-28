@@ -38,11 +38,9 @@
             </div>
 
             <div class="col-sm-12">
-                <div class="add-cart">
                   <%= simple_form_for [@shop, @cart] do |f|%>
-                    <%= f.submit "SAVE ORDER", class:"btn btn-action btn-duck-blue btn-medium border-rad", id:"btn-save-order" %>
+                    <%= f.submit "SAVE ORDER", class:"btn btn-action btn-duck-blue btn-medium border-rad",style:"margin-top:20%;", id:"btn-save-order" %>
                   <% end %>
-                </div>
             </div>
 
     </div>
