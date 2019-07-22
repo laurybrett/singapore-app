@@ -6,6 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+PastOrder.destroy_all
+puts "Del pastorders"
+
+Order.destroy_all
+puts "deleted orders"
+
+Cart.destroy_all
+puts "Deleted carts"
+
 Shop.destroy_all
 puts "Deleted shops"
 
