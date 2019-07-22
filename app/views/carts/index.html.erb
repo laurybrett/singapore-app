@@ -12,7 +12,7 @@
               <p><%= cart.created_at%></p>
               <p style="font-weight: 300; font-size:13px;"><%= cart.shop.price%> SGD</p>
 
-                <%= link_to root_path(cart), class: "btn btn-action", :method => :delete do %> X
+                <%= link_to root_path, class: "btn btn-action", :method => :delete do %> X
               <% end %>
             </div>
           </div>

@@ -1,9 +1,10 @@
 class CartsController < ApplicationController
 
   def index
-    @shop = Shop.find(params[:shop_id])
     @user = User.find(current_user.id)
+    @shops = Shop.all
     @carts = Cart.all
+    #@shop = Shop.find(params[:shop_id])
   end
 
   def new
@@ -33,8 +34,10 @@ class CartsController < ApplicationController
 
   def destroy
     @cart = Cart.find(params[:id])
+    @order = Order.find(params[:id])
+    @shop = Shop.find(params[:id])
     @cart.destroy
 
-    redirect_to shop_carts_path
+    redirect_to root_path
   end
 end
