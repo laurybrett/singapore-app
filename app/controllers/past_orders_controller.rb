@@ -17,6 +17,6 @@ class PastOrdersController < ApplicationController
     end
   end
 
-  def index
+  def destroy
   end
 end

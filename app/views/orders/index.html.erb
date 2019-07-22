@@ -1,0 +1,24 @@
+
+<div class=container>
+  <div class="row">
+      <div class="col-sm-12">
+
+      <% @orders.reverse.each do |order| %>
+        <%= link_to edit_shop_cart_order_path(order.cart.shop.id, order.cart.id, order) do %>
+          <div class="myorder-cart", style="padding: 10px 0 0 20px;">
+            <div class=cart-info>
+              <p style="font-size: 14px; color:black; font-weight: 500;"><%= order.cart.shop.name%></p>
+               <p style="font-size: 14px; color:black; font-weight: 500;"><%= order.code_validated%></p>
+            </div>
+            <div class=cart-info style="color: #625F5F;">
+              <p><%= order.created_at%></p>
+              <p style="font-weight: 300; font-size:13px;"><%= order.cart.shop.price%> SGD</p>
+
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

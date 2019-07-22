@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
     @order.code_validated_time = DateTime.now
 
     if @order.update(order_params)
-      redirect_to shops_path
+      redirect_to allorders_path
     else
       render :edit
     end
@@ -47,7 +47,18 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def index #allorders button in navbar
+    @orders = Order.all
+  end
+
   def destroy
+    @order = Order.find(params[:id])
+    @cart = Cart.find(params[:cart_id])
+    @user = User.find(current_user.id)
+
+    @order.destroy
+
+    redirect_to allorders_path
   end
 
   private
