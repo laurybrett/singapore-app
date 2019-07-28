@@ -12,6 +12,7 @@ puts "Del pastorders"
 Order.destroy_all
 puts "deleted orders"
 
+
 Cart.destroy_all
 puts "Deleted carts"
 
