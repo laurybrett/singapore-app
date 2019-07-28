@@ -198,6 +198,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap-sass (~> 3.3)
+  bundler
   devise
   dotenv-rails
   font-awesome-sass (~> 5.5.0)
