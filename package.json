@@ -2,7 +2,7 @@
   "name": "singapore-app",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "^4.0.7",
     "bootstrap": "^4.3.1",
     "fstream": "^1.0.12",
     "jquery": "^3.4.1",
@@ -10,7 +10,8 @@
     "lodash": "^4.17.15",
     "lodash.mergewith": "^4.6.2",
     "lodash.template": "^4.5.0",
-    "tar": ">=2.2.2"
+    "tar": ">=2.2.2",
+    "yaml-update": "^0.1.2"
   },
   "devDependencies": {
     "popper.js": "^1.15.0",
